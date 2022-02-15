@@ -1,9 +1,10 @@
-count_hyperfocus = 0
-count_hypofocus = 0
+-- count_hyperfocus = 0
+-- count_hypofocus = 0
 
 local function ADHD_Init()
     local player = getSpecificPlayer(0)
     local days_survived = player:getHoursSurvived() / 24
+    -- TODO: Add lucky/unlucky effect to chance?
     local starting_chance = 35
     local chance_of_focus = math.min((days_survived * 0.5) + starting_chance, 70)
     local roll = ZombRand(100) + 1
@@ -14,12 +15,14 @@ local function ADHD_Init()
         "FastLearner",
         "FastReader",
         "NeedsLessSleep",
+        "Dextrous"
     }
 
     local negatives = {
         "SlowLearner",
         "SlowReader",
-        "NeedsMoreSleep",    
+        "NeedsMoreSleep",
+        "AllThumbs"
     }
 
     for _, value in pairs(positives) do
@@ -34,18 +37,18 @@ local function ADHD_Init()
         for _, value in pairs(positives) do
             player:getTraits():add(value);
         end 
-        count_hyperfocus = count_hyperfocus + 1 
+        -- count_hyperfocus = count_hyperfocus + 1
     else
         -- Enable Hypofocus
         for _, value in pairs(negatives) do
             player:getTraits():add(value);
         end 
-        count_hypofocus = count_hypofocus + 1
+        -- count_hypofocus = count_hypofocus + 1
     end
     print('chance_of_focus: '..tostring(chance_of_focus)..' Rolled: '..tostring(roll))
     print('is_in_hyperfocus: '..tostring(is_in_hyperfocus))
     print('days_survived'..days_survived)
-    print('count_hypofocus: '..count_hypofocus..' count_hyperfocus: '..count_hyperfocus)
+    -- print('count_hypofocus: '..count_hypofocus..' count_hyperfocus: '..count_hyperfocus)
     player:Say(is_in_hyperfocus and "I feel focused" or "I don't feel focused")
 end
 
@@ -53,7 +56,7 @@ ProfessionFramework.addTrait('ADHD', {
     name = "UI_trait_ADHD",
     description = "UI_trait_ADHDdesc",
     icon = "trait_ADHD",
-    cost = -6,
+    cost = -8,
     exclude = {
         "FastLearner",
         "FastReader",
@@ -61,6 +64,8 @@ ProfessionFramework.addTrait('ADHD', {
         "SlowLearner",
         "SlowReader",
         "NeedsMoreSleep",
+        "Dextrous",
+        "AllThumbs",
     },
     OnNewGame = function (player, square, profession)
         ADHD_Init()

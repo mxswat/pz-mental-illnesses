@@ -1,5 +1,5 @@
 version=1
-title=Mental illnesses
+title=Mental illnesses Traits, ADHD And More coming
 description=This is an example mod with two worlds.  You can use this as a template for your own map mods.
 description=
 description=The first world has a single 300x300-tile cell.

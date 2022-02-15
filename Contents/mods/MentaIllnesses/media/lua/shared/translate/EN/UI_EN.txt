@@ -1,4 +1,4 @@
 UI_EN = {
     UI_trait_ADHD = "ADHD",
-    UI_trait_ADHDdesc = "Everyday you have 35% chance to be in Hyperfocus and you get:<br> Fast Learner, Fast Reader and Wakeful<br>Or you will be in Hypofocus and get: Slow Learner, Slow Reader and Sleepyhead<br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a 70%",
+    UI_trait_ADHDdesc = "Everyday you have 35% chance to be in Hyperfocus and you get:<br>Fast Learner, Fast Reader, Wakeful and Dextrous<br>Or you will be in Hypofocus and get:<br> Slow Learner, Slow Reader, Sleepyhead and All Thumbs<br><br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a 70%",
 }
