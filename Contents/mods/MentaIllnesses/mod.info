@@ -1,0 +1,5 @@
+name=Mental illnesses
+id=Mentalillnesses
+description=This is an example mod containing two maps.
+require=ProfessionFramework
+poster=poster.png
