@@ -25,26 +25,8 @@ local function ADHD_Init()
         "AllThumbs"
     }
 
-    for _, value in pairs(positives) do
-        player:getTraits():remove(value);
-    end
-    for _, value in pairs(negatives) do
-        player:getTraits():remove(value);
-    end
+    ApplyPositiveOrNegativeTraitsGivenACondition(is_in_hyperfocus, positives, negatives)
 
-    if is_in_hyperfocus then
-        -- Enable Hyperfocus
-        for _, value in pairs(positives) do
-            player:getTraits():add(value);
-        end 
-        -- count_hyperfocus = count_hyperfocus + 1
-    else
-        -- Enable Hypofocus
-        for _, value in pairs(negatives) do
-            player:getTraits():add(value);
-        end 
-        -- count_hypofocus = count_hypofocus + 1
-    end
     print('chance_of_focus: '..tostring(chance_of_focus)..' Rolled: '..tostring(roll))
     print('is_in_hyperfocus: '..tostring(is_in_hyperfocus))
     print('days_survived'..days_survived)
@@ -56,7 +38,7 @@ ProfessionFramework.addTrait('ADHD', {
     name = "UI_trait_ADHD",
     description = "UI_trait_ADHDdesc",
     icon = "trait_ADHD",
-    cost = -8,
+    cost = -6,
     exclude = {
         "FastLearner",
         "FastReader",
