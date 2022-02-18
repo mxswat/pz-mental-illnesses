@@ -38,7 +38,7 @@ ProfessionFramework.addTrait('ADHD', {
     name = "UI_trait_ADHD",
     description = "UI_trait_ADHDdesc",
     icon = "trait_ADHD",
-    cost = -6,
+    cost = -7,
     exclude = {
         "FastLearner",
         "FastReader",
