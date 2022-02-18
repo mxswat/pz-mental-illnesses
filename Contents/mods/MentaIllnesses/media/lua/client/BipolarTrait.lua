@@ -76,7 +76,7 @@ local function onPlayerUpdate(player)
     local playerdata = player:getModData();
     local isInDepression = player:HasTrait("BipolarDepression")
     local unhappyness = player:getBodyDamage():getUnhappynessLevel()
-    local unhappynessChange = isInDepression and 0.002 or -0.004
+    local unhappynessChange = isInDepression and 0.04 or -0.04
     local hasUnhappynessToChange = (isInDepression and unhappyness <= 60) or (not isInDepression and unhappyness >= 20) 
     if hasUnhappynessToChange then
         player:getBodyDamage():setUnhappynessLevel(unhappyness + unhappynessChange);
