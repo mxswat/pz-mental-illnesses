@@ -5,4 +5,6 @@ UI_EN = {
     UI_trait_Bipolardesc = "Everyday you switch between Bipolar Mania and Bipolar Depression.<br>Bipolar Mania gives you Sadness reduction, Stress reduction, Endurance boost, the Wakeful trait.<br>Bipolar Depression gives you Sadness increase, Stress increase, Endurance decrease, the Sleepyhead trait.",
     UI_trait_BipolarMania = "Bipolar Mania",
     UI_trait_BipolarDepression = "Bipolar Depression",
+    UI_trait_Tourette = "Tourette Syndrome",
+    UI_trait_Tourettedesc = "Every ten in-game minutes, you will have a 15% chace of having tic between shouting, shoving, racking, reloading, or attacking <br>The chance scales with panic up to +15%, and decreases with survived days, up to -5%" 
 }

@@ -29,9 +29,9 @@ local function ADHD_Init()
 
     print('chance_of_focus: '..tostring(chance_of_focus)..' Rolled: '..tostring(roll))
     print('is_in_hyperfocus: '..tostring(is_in_hyperfocus))
-    print('days_survived'..days_survived)
-    -- print('count_hypofocus: '..count_hypofocus..' count_hyperfocus: '..count_hyperfocus)
+    -- print('days_survived'..days_survived)
     player:Say(is_in_hyperfocus and "I feel focused" or "I don't feel focused")
+    -- TODO: IN hyperfoucs makes action faster, BUT disable the ability to interrupt them, EG: Reading a book, cutting down tree etc
 end
 
 ProfessionFramework.addTrait('ADHD', {
