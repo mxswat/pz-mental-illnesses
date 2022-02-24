@@ -1,10 +1,10 @@
 UI_EN = {
     UI_trait_ADHD = "ADHD",
-    UI_trait_ADHDdesc = "Everyday you have 35% chance to be in Hyperfocus and you get:<br>Fast Learner, Fast Reader, Wakeful and Dextrous<br>Or you will be in Hypofocus and get:<br> Slow Learner, Slow Reader, Sleepyhead and All Thumbs<br><br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a 70%",
+    UI_trait_ADHDdesc = "Everyday you have a 35% chance to be in Hyperfocus, OR Hypofocus.<br> Hyperfocus will grant you the traits: Fast Learner, Fast Reader, Wakeful, and Dextrous.<br> Hypofocus will grant you the traits: Slow Learner, Slow Reader, Sleepyhead and All Thumbs.<br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a max cap of 70%.<br>",
     UI_trait_Bipolar = "Bipolar I Disorder"
-    UI_trait_Bipolardesc = "Everyday you switch between Bipolar Mania and Bipolar Depression.<br>Bipolar Mania gives you Sadness reduction, Stress reduction, Endurance boost, the Wakeful trait.<br>Bipolar Depression gives you Sadness increase, Stress increase, Endurance decrease, the Sleepyhead trait.",
+    UI_trait_Bipolardesc = "Everyday you switch between Bipolar Mania and Bipolar Depression.<br>Bipolar Mania grants you the following buffs: Sadness reduction, Stress reduction, Endurance boost, as well as the  Wakeful trait.<br>Bipolar Depression grants you the following De-buffs: Sadness increase, Stress increase, Endurance decrease, and the Sleepyhead trait.<br>Note: I'm aware that this is supposed to be a weekly switch, but this first version is daily.<br>",
     UI_trait_BipolarMania = "Bipolar Mania",
     UI_trait_BipolarDepression = "Bipolar Depression",
     UI_trait_Tourette = "Tourette Syndrome",
-    UI_trait_Tourettedesc = "Every ten in-game minutes, you will have a 15% chace of having tic between shouting, shoving, racking, reloading, or attacking <br>The chance scales with panic up to +15%, and decreases with survived days, up to -5%" 
+    UI_trait_Tourettedesc = "Every ten in-game minutes, you will have a 15% chance of having tic between shouting, shoving, racking, reloading, or attacking.<br>The chance scales with panic up to +15%, and decreases with survived days, up to -5%<br>" 
 }
