@@ -1,6 +1,6 @@
 UI_EN = {
     UI_trait_ADHD = "ADHD",
-    UI_trait_ADHDdesc = "Everyday you have a 35% chance to be in Hyperfocus, OR Hypofocus.<br> Hyperfocus will grant you the traits: Fast Learner, Fast Reader, Wakeful, and Dextrous.<br> Hypofocus will grant you the traits: Slow Learner, Slow Reader, Sleepyhead and All Thumbs.<br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a max cap of 70%.<br>",
+    UI_trait_ADHDdesc = "Everyday you have a 35% chance to be in Hyperfocus, but will otherwise be in Hypofocus.<br> Hyperfocus will grant you the traits: Fast Learner, Fast Reader, Wakeful, and Dextrous.<br> Hypofocus will grant you the traits: Slow Learner, Slow Reader, Sleepyhead and All Thumbs.<br>Each survived day Increases the chance of Hyperfocus by 0.5% Up to a max cap of 70%.<br>",
     UI_trait_Bipolar = "Bipolar I Disorder"
     UI_trait_Bipolardesc = "Everyday you switch between Bipolar Mania and Bipolar Depression.<br>Bipolar Mania grants you the following buffs: Sadness reduction, Stress reduction, Endurance boost, as well as the  Wakeful trait.<br>Bipolar Depression grants you the following De-buffs: Sadness increase, Stress increase, Endurance decrease, and the Sleepyhead trait.<br>Note: I'm aware that this is supposed to be a weekly switch, but this first version is daily.<br>",
     UI_trait_BipolarMania = "Bipolar Mania",
