@@ -49,7 +49,7 @@ ProfessionFramework.addTrait('Tourette', {
     name = "UI_trait_Tourette",
     description = "UI_trait_Tourettedesc",
     icon = "trait_Tourette",
-    cost = -9,
+    cost = -10,
     exclude = {
 
     },
