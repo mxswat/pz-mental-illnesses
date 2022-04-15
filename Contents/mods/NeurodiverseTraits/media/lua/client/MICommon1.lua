@@ -24,6 +24,13 @@ function ApplyPositiveOrNegativeTraitsGivenACondition(isPositives, positives, ne
     end
 end
 
+function RemoveTraits(traits)
+    local player = getSpecificPlayer(0)
+    for _, value in pairs(traits) do
+        player:getTraits():remove(value);
+    end
+end
+
 -- WIP
 function TickBasedUpdate(tickId)
     local player = getPlayer()

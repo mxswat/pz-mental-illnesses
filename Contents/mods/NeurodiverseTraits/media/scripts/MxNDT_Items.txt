@@ -14,7 +14,7 @@ module NeuroTraits {
 	    DisplayCategory = FirstAid,
 		Weight	=	0.2,
 		Type	=	Drainable,
-        UseDelta	=	0.1,
+        UseDelta	=	0.05,
 		UseWhileEquipped	=	FALSE,
 		DisplayName	=	Ritalarr,
 		Icon	=	PillsBetablocker,

@@ -1,37 +1,43 @@
--- count_hyperfocus = 0
--- count_hypofocus = 0
-
-local function ADHD_Init()
+ADHDCore = {}
+ADHDCore.init = function ()
     local player = getSpecificPlayer(0)
     local days_survived = player:getHoursSurvived() / 24
-    -- TODO: Add lucky/unlucky effect to chance?
-    local starting_chance = 35
+    local starting_chance = player:HasTrait("Lucky") and 40 or 35
     local chance_of_focus = math.min((days_survived * 0.5) + starting_chance, 70)
     local roll = ZombRand(100) + 1
     local is_in_hyperfocus = roll <= chance_of_focus
 
-    -- Init by removing all traits that you gain with ADHD
-    local positives = {
-        "FastLearner",
-        "FastReader",
-        "NeedsLessSleep",
-        "Dextrous"
-    }
+    ADHDCore.applyEffect(is_in_hyperfocus)
 
-    local negatives = {
-        "SlowLearner",
-        "SlowReader",
-        "NeedsMoreSleep",
-        "AllThumbs"
-    }
-
-    ApplyPositiveOrNegativeTraitsGivenACondition(is_in_hyperfocus, positives, negatives)
-
-    print('chance_of_focus: '..tostring(chance_of_focus)..' Rolled: '..tostring(roll))
-    print('is_in_hyperfocus: '..tostring(is_in_hyperfocus))
-    -- print('days_survived'..days_survived)
+    -- Maybe TODO: IN hyperfoucs makes action faster, BUT disable the ability to interrupt them, EG: Reading a book, cutting down tree etc
     player:Say(is_in_hyperfocus and "I feel focused" or "I don't feel focused")
-    -- TODO: IN hyperfoucs makes action faster, BUT disable the ability to interrupt them, EG: Reading a book, cutting down tree etc
+end
+
+local positives = {
+    "FastLearner",
+    "FastReader",
+    "Organized",
+    "Dextrous"
+}
+
+local negatives = {
+    "SlowLearner",
+    "SlowReader",
+    "Disorganized",
+    "AllThumbs"
+}
+
+ADHDCore.applyEffect = function (is_in_hyperfocus)
+    ApplyPositiveOrNegativeTraitsGivenACondition(is_in_hyperfocus, positives, negatives)
+end
+
+ADHDCore.applyMedication = function ()
+    local player = getSpecificPlayer(0)
+    if player:HasTrait("ADHD") then
+        RemoveTraits(positives)
+        RemoveTraits(negatives)
+        player:Say("I feel quite balanced")
+    end
 end
 
 ProfessionFramework.addTrait('ADHD', {
@@ -40,22 +46,17 @@ ProfessionFramework.addTrait('ADHD', {
     icon = "trait_ADHD",
     cost = -7,
     exclude = {
-        "FastLearner",
-        "FastReader",
-        "NeedsLessSleep",
-        "SlowLearner",
-        "SlowReader",
-        "NeedsMoreSleep",
-        "Dextrous",
-        "AllThumbs",
+        unpack(positives),
+        unpack(negatives),
     },
     OnNewGame = function (player, square, profession)
-        ADHD_Init()
+        ADHDCore.init()
+        player:getInventory():AddItem("NeuroTraits.PillsRitalarr");
     end,
     OnGameStart = function(trait)
         -- add a new event to trigger every ten minutes
         Events.EveryDays.Add(function()
-            ADHD_Init()
+            ADHDCore.init()
         end)
     end
 })

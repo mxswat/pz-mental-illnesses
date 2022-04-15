@@ -1,3 +1,3 @@
 Tooltip_EN = {
-    Tooltip_PillsRitalarr = "Negates all the effects of ADHD",
+    Tooltip_PillsRitalarr = "Negates all the effects of ADHD untill the next roll (00:00AM). Best used in the morning, starts with 20 pills",
 }
