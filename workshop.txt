@@ -24,5 +24,6 @@ description=- Everyday each Skill will have 50% chance to lose 2.5% XP, this doe
 description=
 description=More to come Soon
 description=Source: https://github.com/mxswat/pz-neurodiverse-traits
+description=https://discord.gg/7FAYkCJJcb If you want to get in touch
 tags=Build 41;Misc;Pop Culture;Realistic;Traits
 visibility=public

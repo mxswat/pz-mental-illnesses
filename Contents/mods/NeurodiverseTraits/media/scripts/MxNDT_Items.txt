@@ -1,0 +1,26 @@
+module NeuroTraits {
+	imports	{
+		Base
+	}
+
+	/** 
+		If the name of an item starts with 'Pills' then in the ISInventoryPaneContextMenu
+		You can hook into ISInventoryPaneContextMenu.onPillsItems
+		As an alternative, if are not using Drainable items, 
+		you can copy how the cigarette works via overriding the oneat function (OnEat_Cigarettes)
+	**/
+	item PillsRitalarr
+	{
+	    DisplayCategory = FirstAid,
+		Weight	=	0.2,
+		Type	=	Drainable,
+        UseDelta	=	0.1,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Ritalarr,
+		Icon	=	PillsBetablocker,
+		Tooltip = Tooltip_PillsRitalarr,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Medical = TRUE,
+	}
+}
