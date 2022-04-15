@@ -1,3 +1,6 @@
+-- File renamed to 0Utils.lua so it loads before all the other files, 
+-- and this allows me to use MxAppendTables otherwise it would not be defined
+
 function GetRandomPerkExceptPassivAndAgility()
     local perk = nil
     repeat
@@ -9,6 +12,16 @@ function GetRandomPerkExceptPassivAndAgility()
         end
     until (perk ~= nil)
     return perk
+end
+
+function MxAppendTables(t1, t2)
+    local t = {unpack(t1)}
+
+    for _,v in ipairs(t2) do 
+        table.insert(t, v)
+    end
+
+    return t
 end
 
 

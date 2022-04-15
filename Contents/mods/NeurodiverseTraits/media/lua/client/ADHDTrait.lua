@@ -27,6 +27,8 @@ local negatives = {
     "AllThumbs"
 }
 
+local traits = MxAppendTables(positives, negatives)
+
 ADHDCore.applyEffect = function (is_in_hyperfocus)
     ApplyPositiveOrNegativeTraitsGivenACondition(is_in_hyperfocus, positives, negatives)
 end
@@ -45,10 +47,7 @@ ProfessionFramework.addTrait('ADHD', {
     description = "UI_trait_ADHDdesc",
     icon = "trait_ADHD",
     cost = -7,
-    exclude = {
-        unpack(positives),
-        unpack(negatives),
-    },
+    exclude = traits,
     OnNewGame = function (player, square, profession)
         ADHDCore.init()
         player:getInventory():AddItem("NeuroTraits.PillsRitalarr");
