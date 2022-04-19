@@ -50,7 +50,7 @@ ProfessionFramework.addTrait('ADHD', {
     exclude = traits,
     OnNewGame = function (player, square, profession)
         ADHDCore.init()
-        player:getInventory():AddItem("NeuroTraits.PillsRitalarr");
+        player:getInventory():AddItem("NeuroTraits.PillsAdderal");
     end,
     OnGameStart = function(trait)
         -- add a new event to trigger every ten minutes

@@ -4,7 +4,7 @@ require "Items/ProceduralDistributions"
 local i;
 
 local myDistTable = {
-    "NeuroTraits.PillsRitalarr", 20,
+    "NeuroTraits.PillsAdderal", 20,
 }
 local function insertTable(gameList, mylist)
     local n = #gameList

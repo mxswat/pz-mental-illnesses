@@ -9,16 +9,16 @@ module NeuroTraits {
 		As an alternative, if are not using Drainable items, 
 		you can copy how the cigarette works via overriding the oneat function (OnEat_Cigarettes)
 	**/
-	item PillsRitalarr
+	item PillsAdderal
 	{
 	    DisplayCategory = FirstAid,
 		Weight	=	0.2,
 		Type	=	Drainable,
         UseDelta	=	0.05,
 		UseWhileEquipped	=	FALSE,
-		DisplayName	=	Ritalarr,
+		DisplayName	=	Adderal,
 		Icon	=	PillsBetablocker,
-		Tooltip = Tooltip_PillsRitalarr,
+		Tooltip = Tooltip_PillsAdderal,
 		StaticModel = PillBottle,
 		WorldStaticModel = PillBottleGround,
 		Medical = TRUE,

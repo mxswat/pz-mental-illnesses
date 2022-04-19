@@ -12,7 +12,7 @@ end
 
 function ISTakePillAction:useNeuroTraitPills()
 	local type = self.item:getType()
-	if type == "PillsRitalarr" then
+	if type == "PillsAdderal" then
 		ADHDCore.applyMedication()
 	end
 end
