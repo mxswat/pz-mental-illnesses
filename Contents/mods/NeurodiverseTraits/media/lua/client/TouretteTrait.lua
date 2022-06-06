@@ -1,11 +1,16 @@
 local skipFirst = true
 
 local function Tourette_Init()
+    local player = getSpecificPlayer(0)
+    if not player or not player:HasTrait("Tourette") then
+        return
+    end
+
     if skipFirst then
         skipFirst = false
         return
     end
-    local player = getPlayer()
+
     local roll = ZombRand(100) + 1
     local vehicle = player:getVehicle()
     local weapon = player:getPrimaryHandItem()

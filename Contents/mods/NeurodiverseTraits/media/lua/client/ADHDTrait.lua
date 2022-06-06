@@ -1,6 +1,11 @@
 ADHDCore = {}
 ADHDCore.init = function ()
     local player = getSpecificPlayer(0)
+
+    if not player or not player:HasTrait("ADHD") then
+        return
+    end
+
     local days_survived = player:getHoursSurvived() / 24
     local starting_chance = player:HasTrait("Lucky") and 40 or 35
     local chance_of_focus = math.min((days_survived * 0.5) + starting_chance, 70)

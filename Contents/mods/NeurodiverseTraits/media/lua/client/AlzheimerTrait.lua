@@ -1,6 +1,10 @@
 local function Alzheimer_Init()
     local player = getSpecificPlayer(0)
 
+    if not player or not player:HasTrait("Alzheimer") then
+        return
+    end
+
     local perks = {}
 
     for i=0, Perks.getMaxIndex() - 1 do

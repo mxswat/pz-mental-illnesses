@@ -1,6 +1,10 @@
 local function Bipolar_Init()
     local player = getSpecificPlayer(0)
 
+    if not player or not player:HasTrait("Bipolar") then
+        return
+    end
+
     local positives = {
         "BipolarMania",
         "NeedsLessSleep",
